@@ -99,7 +99,7 @@ def main(ep):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(joined), "-af", MASTER, "-ar", "44100", "-b:a", "192k", str(mp3_out)], check=True)
     real = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(mp3_out)], capture_output=True, text=True).stdout)
     voice_end = timing[-1]["end"]
-    hold = float(src.get("hold", 3.0))
+    hold = float(src.get("hold", 3.8))
     total = int(round((voice_end + hold) * FPS))
     doc = {**{k: v for k, v in src.items() if k != "sentences"}, "fps": FPS, "voice": f"{ep}/voice.mp3", "voiceEnd": voice_end, "mp3Seconds": round(real, 3),
            "totalFrames": total, "sentences": timing, "creditsSpent": chars}
