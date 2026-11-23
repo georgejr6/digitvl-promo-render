@@ -1,0 +1,38 @@
+name: vo
+
+# Voice + word timings for promo episodes (ElevenLabs "Mwosa 2026 Studio Narrator" recipe, tools/vo.py).
+#   gh workflow run vo.yml -f episodes="dvs01 dvs02"
+# Output: release asset "vo-<ep>" (vo-<ep>.tgz = public/<ep>/voice.mp3 + timing.json) and "vocache-<ep>" (raw takes: re-runs cost 0 credits).
+on:
+  workflow_dispatch:
+    inputs:
+      episodes:
+        description: "space separated episode ids"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  vo:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg rubberband-cli >/dev/null
+      - run: ffmpeg -hide_banner -filters 2>/dev/null | grep -c rubberband
+      - name: Voice
+        run: |
+          for EP in ${{ inputs.episodes }}; do
+            mkdir -p cache
+            if gh release download "vocache-$EP" -p "*.tgz" -D /tmp/vc --repo "$GITHUB_REPOSITORY" 2>/dev/null; then tar -xzf /tmp/vc/*.tgz -C . ; rm -rf /tmp/vc; fi
+            python3 tools/vo.py "$EP"
+            tar -czf "/tmp/vo-$EP.tgz" -C "public/$EP" voice.mp3 timing.json
+            tar -czf "/tmp/vocache-$EP.tgz" "cache/$EP"
+            gh release view "vo-$EP" >/dev/null 2>&1 || gh release create "vo-$EP" --title "vo $EP" --notes "voice + timings" --prerelease
+            gh release upload "vo-$EP" "/tmp/vo-$EP.tgz" --clobber
+            gh release view "vocache-$EP" >/dev/null 2>&1 || gh release create "vocache-$EP" --title "vocache $EP" --notes "raw takes" --prerelease
+            gh release upload "vocache-$EP" "/tmp/vocache-$EP.tgz" --clobber
+          done

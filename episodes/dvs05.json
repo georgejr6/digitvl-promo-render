@@ -1,0 +1,106 @@
+{
+ "id": "dvs05",
+ "title": "Why Print On Demand Means Zero Inventory",
+ "desc": "Print on demand explained: a fan orders, then it is printed and shipped. You never hold stock.",
+ "hashtags": [
+  "#printondemand",
+  "#merch"
+ ],
+ "music": "Funk_Game_Loop",
+ "sentences": [
+  {
+   "text": "Stop buying two hundred hoodies you might never sell.",
+   "scene": "hook"
+  },
+  {
+   "text": "Print on demand flips it.",
+   "scene": "cmp"
+  },
+  {
+   "text": "A fan orders. Then it gets printed, packed and shipped.",
+   "scene": "flow"
+  },
+  {
+   "text": "You never hold stock. You never pack a box.",
+   "scene": "flow"
+  },
+  {
+   "text": "That means no upfront bill for inventory, and no leftovers.",
+   "scene": "prod"
+  },
+  {
+   "text": "DIGITVL Stores connects to real Printful products, so you start with real catalog items.",
+   "scene": "prod"
+  },
+  {
+   "text": "Start at stores.digitvl.com",
+   "scene": "cta"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "STOP BUYING",
+    "200 HOODIES"
+   ]
+  },
+  "cmp": {
+   "type": "compare",
+   "left": {
+    "t": "THE OLD WAY",
+    "l": [
+     "Buy 200 hoodies",
+     "Store the boxes",
+     "Hope they sell"
+    ]
+   },
+   "right": {
+    "t": "PRINT ON DEMAND",
+    "l": [
+     "Fan orders",
+     "Printed for them",
+     "Shipped to them"
+    ]
+   }
+  },
+  "flow": {
+   "type": "flow",
+   "title": "HOW IT WORKS",
+   "nodes": [
+    {
+     "i": "cart",
+     "t": "A fan orders",
+     "s": "on your store"
+    },
+    {
+     "i": "print",
+     "t": "It gets printed",
+     "s": "on demand"
+    },
+    {
+     "i": "box",
+     "t": "It ships",
+     "s": "straight to them"
+    }
+   ]
+  },
+  "prod": {
+   "type": "products",
+   "title": "REAL PRINTFUL PRODUCTS",
+   "items": [
+    "hoodie",
+    "tee",
+    "mug",
+    "cap",
+    "tote",
+    "poster"
+   ]
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "musicStart": 0,
+ "musicCredit": "Music: \"Funk Game Loop\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}

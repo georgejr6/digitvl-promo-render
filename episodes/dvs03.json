@@ -1,0 +1,76 @@
+{
+ "id": "dvs03",
+ "title": "Your Free artistname.digitvl.com Merch Store",
+ "desc": "Every DIGITVL store gets its own free address, yourname.digitvl.com. Your own domain is optional.",
+ "hashtags": [
+  "#artistmerch",
+  "#linkinbio"
+ ],
+ "music": "Funk_Game_Loop",
+ "sentences": [
+  {
+   "text": "Your fans can find you at artistname.digitvl.com",
+   "scene": "hook"
+  },
+  {
+   "text": "No website builder to learn. No hosting to set up.",
+   "scene": "addr"
+  },
+  {
+   "text": "Pick your name when you sign up, and the address is yours.",
+   "scene": "addr"
+  },
+  {
+   "text": "Want your own domain? That's optional. Request it and connect it to the same store.",
+   "scene": "dom"
+  },
+  {
+   "text": "Put the link in your bio, your videos, your tour posters.",
+   "scene": "prod"
+  },
+  {
+   "text": "One link. Your whole merch shop.",
+   "scene": "prod"
+  },
+  {
+   "text": "Claim your name at stores.digitvl.com",
+   "scene": "cta"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "YOUR OWN LINK",
+    "ARTISTNAME",
+    ".DIGITVL.COM"
+   ]
+  },
+  "addr": {
+   "type": "address",
+   "sub": "artistname",
+   "big": true
+  },
+  "dom": {
+   "type": "address",
+   "sub": "artistname",
+   "custom": "yourname.com",
+   "big": true
+  },
+  "prod": {
+   "type": "products",
+   "title": "ONE LINK, WHOLE SHOP",
+   "items": [
+    "tee",
+    "hoodie",
+    "mug",
+    "cap"
+   ]
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "musicStart": 0,
+ "musicCredit": "Music: \"Funk Game Loop\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}

@@ -1,0 +1,91 @@
+{
+ "id": "dvs01",
+ "title": "Launch Your Artist Merch Store In Minutes",
+ "desc": "Launch an artist merch store in minutes: sign up, pick products, add your logo, set prices. Real print-on-demand products, no inventory.",
+ "hashtags": [
+  "#artistmerch",
+  "#printondemand"
+ ],
+ "music": "Newer_Wave",
+ "sentences": [
+  {
+   "text": "Launch your own merch store in minutes.",
+   "scene": "hook"
+  },
+  {
+   "text": "No developer. No inventory. No waiting.",
+   "scene": "hook"
+  },
+  {
+   "text": "Step one, sign up and pick your store name.",
+   "scene": "steps"
+  },
+  {
+   "text": "Step two, choose your products. Tees, hoodies, mugs, posters.",
+   "scene": "steps"
+  },
+  {
+   "text": "Step three, drop in your logo and set your prices.",
+   "scene": "steps"
+  },
+  {
+   "text": "Your store gets its own address.",
+   "scene": "addr"
+  },
+  {
+   "text": "The setup is guided, and an AI can build it with you in chat.",
+   "scene": "chat"
+  },
+  {
+   "text": "Open your store at stores.digitvl.com",
+   "scene": "cta"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "LAUNCH YOUR",
+    "MERCH STORE",
+    "IN MINUTES"
+   ]
+  },
+  "steps": {
+   "type": "steps",
+   "title": "HOW IT WORKS",
+   "steps": [
+    {
+     "t": "Sign up",
+     "s": "pick your store name"
+    },
+    {
+     "t": "Choose products",
+     "s": "tees, hoodies, mugs, posters"
+    },
+    {
+     "t": "Add logo + prices",
+     "s": "you set every price"
+    }
+   ]
+  },
+  "addr": {
+   "type": "address",
+   "sub": "yourname"
+  },
+  "chat": {
+   "type": "chat",
+   "user": "Dark, minimal, red and black. Hoodies and tees.",
+   "ai": "Done. Your draft store is ready to review.",
+   "chips": [
+    "Hoodie",
+    "T-shirt",
+    "Mug"
+   ]
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "musicStart": 89.45,
+ "musicCredit": "Music: \"Newer Wave\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}

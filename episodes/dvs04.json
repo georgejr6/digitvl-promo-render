@@ -1,0 +1,74 @@
+{
+ "id": "dvs04",
+ "title": "Tell An AI Your Vibe, Get A Merch Store",
+ "desc": "Tell the DIGITVL Stores AI your vibe and it drafts your merch store. Nothing goes live until you confirm your prices.",
+ "hashtags": [
+  "#aitools",
+  "#artistmerch"
+ ],
+ "music": "Jaunty_Gumption",
+ "sentences": [
+  {
+   "text": "Tell an AI your vibe, and it builds your merch store.",
+   "scene": "hook"
+  },
+  {
+   "text": "Describe your brand in plain words. Dark, minimal, red and black.",
+   "scene": "chat"
+  },
+  {
+   "text": "It picks real products, matches colors that exist in the catalog, and drafts the whole store.",
+   "scene": "prod"
+  },
+  {
+   "text": "Then it stops. Nothing goes live until you confirm your prices.",
+   "scene": "price"
+  },
+  {
+   "text": "You stay the boss. The AI just does the busywork.",
+   "scene": "price"
+  },
+  {
+   "text": "Chat with it at stores.digitvl.com",
+   "scene": "cta"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "TELL AN AI",
+    "YOUR VIBE.",
+    "GET A STORE."
+   ]
+  },
+  "chat": {
+   "type": "chat",
+   "user": "Dark, minimal, red and black. Hoodies and tees.",
+   "ai": "Got it. I'm drafting your store now.",
+   "chips": [
+    "Hoodie",
+    "T-shirt",
+    "Tote"
+   ]
+  },
+  "prod": {
+   "type": "products",
+   "title": "DRAFT STORE",
+   "items": [
+    "hoodie",
+    "tee",
+    "tote"
+   ],
+   "draft": true
+  },
+  "price": {
+   "type": "price"
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "musicStart": 64.11,
+ "musicCredit": "Music: \"Jaunty Gumption\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}

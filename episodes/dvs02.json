@@ -1,0 +1,94 @@
+{
+ "id": "dvs02",
+ "title": "See Your Logo On A Real Hoodie Before You Spend A Dollar",
+ "desc": "See your logo on real print-on-demand products before anything is made. Nothing prints until a fan orders.",
+ "hashtags": [
+  "#merch",
+  "#printondemand"
+ ],
+ "music": "Adventure_Meme",
+ "sentences": [
+  {
+   "text": "See your logo on a real hoodie before you spend a dollar.",
+   "scene": "hook"
+  },
+  {
+   "text": "Upload your logo once.",
+   "scene": "hero"
+  },
+  {
+   "text": "DIGITVL Stores places it on real product templates. Tees, hoodies, mugs, even tote bags.",
+   "scene": "prod"
+  },
+  {
+   "text": "You see exactly what your fans would get.",
+   "scene": "prod"
+  },
+  {
+   "text": "Nothing gets printed until someone actually orders.",
+   "scene": "flow"
+  },
+  {
+   "text": "So there's no stock to buy, and nothing to risk.",
+   "scene": "flow"
+  },
+  {
+   "text": "Start yours at stores.digitvl.com",
+   "scene": "cta"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "YOUR LOGO",
+    "ON A REAL HOODIE",
+    "BEFORE YOU SPEND",
+    "A DOLLAR"
+   ]
+  },
+  "hero": {
+   "type": "hero",
+   "item": "hoodie",
+   "caption": "Your logo, placed on the product"
+  },
+  "prod": {
+   "type": "products",
+   "title": "REAL PRODUCT TEMPLATES",
+   "items": [
+    "tee",
+    "hoodie",
+    "mug",
+    "tote",
+    "cap",
+    "poster"
+   ]
+  },
+  "flow": {
+   "type": "flow",
+   "title": "PRINTED ONLY WHEN ORDERED",
+   "nodes": [
+    {
+     "i": "cart",
+     "t": "A fan orders",
+     "s": "on your store"
+    },
+    {
+     "i": "print",
+     "t": "It gets printed",
+     "s": "only then"
+    },
+    {
+     "i": "box",
+     "t": "It ships to them",
+     "s": "you hold no stock"
+    }
+   ]
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "musicStart": 0,
+ "musicCredit": "Music: \"Adventure Meme\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}

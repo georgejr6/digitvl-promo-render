@@ -1,0 +1,67 @@
+{
+ "id": "dvs08",
+ "title": "5 Merch Setup Jobs The AI Does For You",
+ "desc": "The DIGITVL Stores AI handles the boring setup jobs for your merch store. You approve every price.",
+ "hashtags": [
+  "#aitools",
+  "#artistmerch"
+ ],
+ "music": "Jaunty_Gumption",
+ "sentences": [
+  {
+   "text": "Merch setup is five boring jobs. Let the AI do them.",
+   "scene": "hook"
+  },
+  {
+   "text": "One, picking products that actually exist in the catalog.",
+   "scene": "list"
+  },
+  {
+   "text": "Two, matching your colors to real garment colors.",
+   "scene": "list"
+  },
+  {
+   "text": "Three, filling in your brand details from a chat.",
+   "scene": "list"
+  },
+  {
+   "text": "Four, suggesting prices above a safe floor.",
+   "scene": "list"
+  },
+  {
+   "text": "Five, putting everything in a draft for you to review.",
+   "scene": "list"
+  },
+  {
+   "text": "You do one thing. Say yes. Start at stores.digitvl.com",
+   "scene": "cta"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "5 JOBS",
+    "THE AI DOES",
+    "FOR YOU"
+   ]
+  },
+  "list": {
+   "type": "checklist",
+   "title": "DONE BY THE AI",
+   "numbered": true,
+   "items": [
+    "Real catalog products",
+    "Real garment colors",
+    "Brand details from chat",
+    "Prices above a safe floor",
+    "Draft store to review"
+   ]
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "musicStart": 64.11,
+ "musicCredit": "Music: \"Jaunty Gumption\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}

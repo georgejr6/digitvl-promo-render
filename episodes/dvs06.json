@@ -1,0 +1,75 @@
+{
+ "id": "dvs06",
+ "title": "Sell Merch Without A Website Developer",
+ "desc": "You do not need a developer to sell merch: DIGITVL Stores gives you a storefront, product pages and checkout, already built.",
+ "hashtags": [
+  "#artistmerch",
+  "#nocode"
+ ],
+ "music": "Adventure_Meme",
+ "sentences": [
+  {
+   "text": "Want to sell merch but can't code?",
+   "scene": "hook"
+  },
+  {
+   "text": "You don't need a developer.",
+   "scene": "hook"
+  },
+  {
+   "text": "DIGITVL Stores gives you a storefront, product pages, and checkout, already built.",
+   "scene": "check"
+  },
+  {
+   "text": "You bring the name and the logo.",
+   "scene": "check"
+  },
+  {
+   "text": "The store builds itself from a short setup, or a chat with the AI.",
+   "scene": "chat"
+  },
+  {
+   "text": "Then you set your prices and publish.",
+   "scene": "chat"
+  },
+  {
+   "text": "Build yours at stores.digitvl.com",
+   "scene": "cta"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "SELL MERCH",
+    "WITHOUT A",
+    "DEVELOPER"
+   ]
+  },
+  "check": {
+   "type": "checklist",
+   "title": "ALREADY BUILT FOR YOU",
+   "items": [
+    "Storefront",
+    "Product pages",
+    "Checkout",
+    "Your own address"
+   ]
+  },
+  "chat": {
+   "type": "chat",
+   "user": "Streetwear brand for my music. Tees and hoodies.",
+   "ai": "Draft ready. Review it, set prices, publish.",
+   "chips": [
+    "Tee",
+    "Hoodie",
+    "Mug"
+   ]
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "musicStart": 0,
+ "musicCredit": "Music: \"Adventure Meme\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}

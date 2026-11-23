@@ -1,0 +1,86 @@
+{
+ "id": "dvs07",
+ "title": "The Tech Behind An AI-Built Merch Store",
+ "desc": "The tech behind a DIGITVL store explained simply: chat setup, an AI draft, real Printful products, your own address, built-in checkout.",
+ "hashtags": [
+  "#aitools",
+  "#techexplained"
+ ],
+ "music": "Newer_Wave",
+ "sentences": [
+  {
+   "text": "Here's the tech behind a DIGITVL store, in plain English.",
+   "scene": "hook"
+  },
+  {
+   "text": "One. You chat, or fill a short form. That's the whole setup.",
+   "scene": "stack"
+  },
+  {
+   "text": "Two. An AI turns your answers into a draft store.",
+   "scene": "stack"
+  },
+  {
+   "text": "Three. Real print on demand products from Printful fill the shelves.",
+   "scene": "stack"
+  },
+  {
+   "text": "Four. Your store goes up at your own address.",
+   "scene": "stack"
+  },
+  {
+   "text": "Five. Checkout and shipping are built in.",
+   "scene": "stack"
+  },
+  {
+   "text": "You approve every price. See it at stores.digitvl.com",
+   "scene": "cta"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "THE TECH BEHIND",
+    "AN AI",
+    "MERCH STORE"
+   ]
+  },
+  "stack": {
+   "type": "stack",
+   "title": "THE STACK, SIMPLY",
+   "nodes": [
+    {
+     "i": "chat",
+     "t": "Chat or form",
+     "s": "you describe your brand"
+    },
+    {
+     "i": "ai",
+     "t": "AI draft",
+     "s": "turns answers into a store"
+    },
+    {
+     "i": "box",
+     "t": "Real products",
+     "s": "Printful catalog"
+    },
+    {
+     "i": "globe",
+     "t": "Your address",
+     "s": "yourname.digitvl.com"
+    },
+    {
+     "i": "cart",
+     "t": "Checkout",
+     "s": "orders and shipping built in"
+    }
+   ]
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "musicStart": 89.45,
+ "musicCredit": "Music: \"Newer Wave\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}

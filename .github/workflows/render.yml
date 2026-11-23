@@ -1,0 +1,70 @@
+name: render
+
+# Free render of DIGITVL Stores promo Shorts on a PUBLIC repo (GitHub-hosted runners are free + unlimited for public repos).
+#   gh workflow run render.yml -f episodes="dvs01 dvs02 dvs03"
+# Needs release asset "vo-<ep>" (run vo.yml first). Output: release asset "render-<ep>" / <ep>.mp4, mastered to -14 LUFS, QA report in the log.
+on:
+  workflow_dispatch:
+    inputs:
+      episodes:
+        description: "space separated episode ids"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+    steps:
+      - id: p
+        run: python3 -c "import json,sys; print('matrix='+json.dumps({'ep':'${{ inputs.episodes }}'.split()}))" >> "$GITHUB_OUTPUT"
+
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Deps
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg libnss3 libdbus-1-3 libatk1.0-0 libgbm-dev libasound2t64 libxrandr2 libxkbcommon-dev libxfixes3 libxcomposite1 libxdamage1 libatk-bridge2.0-0 libpango-1.0-0 libcairo2 libcups2 >/dev/null
+          npm ci --silent
+      - name: Narration asset
+        run: |
+          gh release download "vo-${{ matrix.ep }}" -p "*.tgz" -D /tmp/vo --repo "$GITHUB_REPOSITORY"
+          mkdir -p public/${{ matrix.ep }} && tar -xzf /tmp/vo/*.tgz -C public/${{ matrix.ep }}
+      - name: Render
+        run: |
+          mkdir -p out
+          echo '{"ep":"${{ matrix.ep }}","doc":null}' > /tmp/props.json
+          START=$(date +%s)
+          npx remotion render Promo out/${{ matrix.ep }}_raw.mp4 --props=/tmp/props.json --concurrency=4 --log=error
+          echo "render wall seconds: $(( $(date +%s) - START ))"
+      - name: Master -14 LUFS + QA
+        run: |
+          python3 tools/master.py out/${{ matrix.ep }}_raw.mp4 out/${{ matrix.ep }}.mp4
+          python3 tools/qa.py out/${{ matrix.ep }}.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.ep }}-final
+          path: |
+            out/${{ matrix.ep }}.mp4
+            out/${{ matrix.ep }}_qa.json
+          retention-days: 14
+      - name: Release asset
+        run: |
+          gh release view "render-${{ matrix.ep }}" >/dev/null 2>&1 || gh release create "render-${{ matrix.ep }}" --title "render ${{ matrix.ep }}" --notes "rendered by Actions" --prerelease
+          gh release upload "render-${{ matrix.ep }}" out/${{ matrix.ep }}.mp4 out/${{ matrix.ep }}_qa.json --clobber
