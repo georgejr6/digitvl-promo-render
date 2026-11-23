@@ -17,6 +17,10 @@
    "scene": "chat"
   },
   {
+   "text": "It can fill in your brand details as you talk.",
+   "scene": "chat"
+  },
+  {
    "text": "It picks real products, matches colors that exist in the catalog, and drafts the whole store.",
    "scene": "prod"
   },
@@ -26,6 +30,10 @@
   },
   {
    "text": "You stay the boss. The AI just does the busywork.",
+   "scene": "price"
+  },
+  {
+   "text": "Prices are suggested above a safe floor, and the final call is yours.",
    "scene": "price"
   },
   {

@@ -17,6 +17,10 @@
    "scene": "cmp"
   },
   {
+   "text": "No boxes, no garage full of merch, no guessing sizes.",
+   "scene": "cmp"
+  },
+  {
    "text": "A fan orders. Then it gets printed, packed and shipped.",
    "scene": "flow"
   },
@@ -30,6 +34,10 @@
   },
   {
    "text": "DIGITVL Stores connects to real Printful products, so you start with real catalog items.",
+   "scene": "prod"
+  },
+  {
+   "text": "Fewer risks, and more time making music.",
    "scene": "prod"
   },
   {

@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parent.parent
 VOICE_ID = "yNyuTGcqoxsMSZ8aSAz7"  # Mwosa 2026 Studio Narrator (owner-approved final voice)
 MODEL = "eleven_multilingual_v2"
 SETTINGS = {"stability": 0.65, "similarity_boost": 0.8, "style": 0.05, "use_speaker_boost": True, "speed": 0.9}
-LEAD, PAD, PAD_TURN, FPS = 0.12, 0.2, 0.36, 30
+LEAD, PAD, PAD_TURN, FPS = 0.12, 0.34, 0.5, 30
 MASTER = ("rubberband=pitch=0.98:formant=preserved,bass=g=2.5:f=130,equalizer=f=900:t=q:w=1:g=-2,equalizer=f=1400:t=q:w=1:g=-2,"
           "acompressor=threshold=-21dB:ratio=2:attack=20:release=250:makeup=1,loudnorm=I=-16:TP=-1.5:LRA=11")
 TURN = re.compile(r"^(But|Here's|Now|Then|Stop|Nothing|You stay|You do)\b")
@@ -99,7 +99,7 @@ def main(ep):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(joined), "-af", MASTER, "-ar", "44100", "-b:a", "192k", str(mp3_out)], check=True)
     real = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(mp3_out)], capture_output=True, text=True).stdout)
     voice_end = timing[-1]["end"]
-    hold = float(src.get("hold", 2.4))
+    hold = float(src.get("hold", 3.0))
     total = int(round((voice_end + hold) * FPS))
     doc = {**{k: v for k, v in src.items() if k != "sentences"}, "fps": FPS, "voice": f"{ep}/voice.mp3", "voiceEnd": voice_end, "mp3Seconds": round(real, 3),
            "totalFrames": total, "sentences": timing, "creditsSpent": chars}

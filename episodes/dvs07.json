@@ -13,6 +13,10 @@
    "scene": "hook"
   },
   {
+   "text": "No jargon. Just the five pieces that matter.",
+   "scene": "hook"
+  },
+  {
    "text": "One. You chat, or fill a short form. That's the whole setup.",
    "scene": "stack"
   },
@@ -30,6 +34,10 @@
   },
   {
    "text": "Five. Checkout and shipping are built in.",
+   "scene": "stack"
+  },
+  {
+   "text": "Simple parts, working together, so you can focus on your art.",
    "scene": "stack"
   },
   {

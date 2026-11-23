@@ -13,6 +13,10 @@
    "scene": "hook"
   },
   {
+   "text": "Here they are, one by one.",
+   "scene": "hook"
+  },
+  {
    "text": "One, picking products that actually exist in the catalog.",
    "scene": "list"
   },
@@ -30,6 +34,10 @@
   },
   {
    "text": "Five, putting everything in a draft for you to review.",
+   "scene": "list"
+  },
+  {
+   "text": "Less setup. More time creating.",
    "scene": "list"
   },
   {

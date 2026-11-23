@@ -21,6 +21,10 @@
    "scene": "addr"
   },
   {
+   "text": "Your fans type one short link and land in your shop.",
+   "scene": "addr"
+  },
+  {
    "text": "Want your own domain? That's optional. Request it and connect it to the same store.",
    "scene": "dom"
   },
@@ -35,6 +39,10 @@
   {
    "text": "Claim your name at stores.digitvl.com",
    "scene": "cta"
+  },
+  {
+   "text": "Free to claim. Easy to remember. All yours.",
+   "scene": "prod"
   }
  ],
  "scenes": {

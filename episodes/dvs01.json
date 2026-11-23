@@ -33,7 +33,15 @@
    "scene": "addr"
   },
   {
+   "text": "That looks like yourname.digitvl.com, and the address is free.",
+   "scene": "addr"
+  },
+  {
    "text": "The setup is guided, and an AI can build it with you in chat.",
+   "scene": "chat"
+  },
+  {
+   "text": "You bring the idea. The platform does the heavy lifting.",
    "scene": "chat"
   },
   {

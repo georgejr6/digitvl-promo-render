@@ -17,6 +17,10 @@
    "scene": "hero"
   },
   {
+   "text": "Pick a product, and your design drops right on.",
+   "scene": "hero"
+  },
+  {
    "text": "DIGITVL Stores places it on real product templates. Tees, hoodies, mugs, even tote bags.",
    "scene": "prod"
   },
@@ -30,6 +34,10 @@
   },
   {
    "text": "So there's no stock to buy, and nothing to risk.",
+   "scene": "flow"
+  },
+  {
+   "text": "Preview first. Print later. That's the whole idea.",
    "scene": "flow"
   },
   {

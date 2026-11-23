@@ -143,6 +143,21 @@ ep("dvs08", "5 Merch Setup Jobs The AI Does For You",
              "items": ["Real catalog products", "Real garment colors", "Brand details from chat", "Prices above a safe floor", "Draft store to review"]},
     "cta": CTA})
 
+# (insert_before_index, text, scene): second pass to reach 30-45 s at the approved narrator pace (~3 words/s)
+EXTRA = {
+    "dvs01": [(6, "That looks like yourname.digitvl.com, and the address is free.", "addr"), (7, "You bring the idea. The platform does the heavy lifting.", "chat")],
+    "dvs02": [(2, "Pick a product, and your design drops right on.", "hero"), (6, "Preview first. Print later. That's the whole idea.", "flow")],
+    "dvs03": [(3, "Your fans type one short link and land in your shop.", "addr"), (7, "Free to claim. Easy to remember. All yours.", "prod")],
+    "dvs04": [(2, "It can fill in your brand details as you talk.", "chat"), (5, "Prices are suggested above a safe floor, and the final call is yours.", "price")],
+    "dvs05": [(2, "No boxes, no garage full of merch, no guessing sizes.", "cmp"), (6, "Fewer risks, and more time making music.", "prod")],
+    "dvs06": [(2, "Websites used to take weeks and a lot of money.", "hook"), (6, "Your store, live at your own address, without writing a line of code.", "chat")],
+    "dvs07": [(1, "No jargon. Just the five pieces that matter.", "hook"), (6, "Simple parts, working together, so you can focus on your art.", "stack")],
+    "dvs08": [(1, "Here they are, one by one.", "hook"), (6, "Less setup. More time creating.", "list")],
+}
+for _id, ins in EXTRA.items():
+    for idx, text, scene in sorted(ins, reverse=True):
+        eps[_id]["sentences"].insert(idx, {"text": text, "scene": scene})
+
 if __name__ == "__main__":
     (ROOT / "episodes").mkdir(exist_ok=True)
     for k, v in eps.items():
