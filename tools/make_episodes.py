@@ -161,6 +161,8 @@ for _id, ins in EXTRA.items():
 if __name__ == "__main__":
     (ROOT / "episodes").mkdir(exist_ok=True)
     for k, v in eps.items():
+        if k == "dvs06":
+            v["hold"] = 4.8  # shortest voice track: longer end card keeps it >= 30 s
         v["musicStart"] = MUSIC_START[v["music"]]
         v["musicCredit"] = CREDIT.format(t=v["music"].replace("_", " "))
         (ROOT / "episodes" / f"{k}.json").write_text(json.dumps(v, indent=1, ensure_ascii=False), encoding="utf-8")
