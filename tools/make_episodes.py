@@ -217,7 +217,9 @@ for _id, ins in EXTRA.items():
 if __name__ == "__main__":
     (ROOT / "episodes").mkdir(exist_ok=True)
     for k, v in eps.items():
-        if k in ("dvs09", "dvs10", "dvs11", "dvs12"):
+        if k == "dvs12":
+            v["hold"] = 6.2
+        elif k in ("dvs09", "dvs10", "dvs11"):
             v["hold"] = 5.0
         if k == "dvs06":
             v["hold"] = 4.8  # shortest voice track: longer end card keeps it >= 30 s
