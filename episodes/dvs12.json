@@ -1,0 +1,115 @@
+{
+ "id": "dvs12",
+ "title": "Start A Merch Brand With Zero Stock And An AI Helper",
+ "desc": "Start an artist merch brand with no stock: guided setup or AI chat, real print-on-demand products, your own address.",
+ "hashtags": [
+  "#merch",
+  "#aitools"
+ ],
+ "music": "Jaunty_Gumption",
+ "sentences": [
+  {
+   "text": "Starting a merch brand sounds expensive.",
+   "scene": "hook"
+  },
+  {
+   "text": "It doesn't have to be.",
+   "scene": "hook"
+  },
+  {
+   "text": "Here's the simple version.",
+   "scene": "hook"
+  },
+  {
+   "text": "With print on demand there's no stock to buy.",
+   "scene": "cmp"
+  },
+  {
+   "text": "With an AI helper there's no developer to hire.",
+   "scene": "chat"
+  },
+  {
+   "text": "You choose products, add your logo, and set your prices.",
+   "scene": "steps"
+  },
+  {
+   "text": "Your store gets its own address, and you approve it before it goes live.",
+   "scene": "addr"
+  },
+  {
+   "text": "No big bill up front, and no boxes of stock at home.",
+   "scene": "addr"
+  },
+  {
+   "text": "Begin at stores.digitvl.com",
+   "scene": "cta"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "START A MERCH",
+    "BRAND WITH",
+    "ZERO STOCK"
+   ]
+  },
+  "cmp": {
+   "type": "compare",
+   "left": {
+    "t": "THE OLD WAY",
+    "l": [
+     "Buy stock upfront",
+     "Hire a developer",
+     "Hope it sells"
+    ]
+   },
+   "right": {
+    "t": "DIGITVL STORES",
+    "l": [
+     "No stock to buy",
+     "AI-guided setup",
+     "You approve it"
+    ]
+   }
+  },
+  "chat": {
+   "type": "chat",
+   "user": "Merch brand for my band. Dark and minimal.",
+   "ai": "Great. Drafting your store for review.",
+   "chips": [
+    "Tee",
+    "Hoodie",
+    "Mug"
+   ]
+  },
+  "steps": {
+   "type": "steps",
+   "title": "THREE MOVES",
+   "steps": [
+    {
+     "t": "Choose products",
+     "s": "from the real catalog"
+    },
+    {
+     "t": "Add your logo",
+     "s": "see it on the product"
+    },
+    {
+     "t": "Set your prices",
+     "s": "you confirm each one"
+    }
+   ]
+  },
+  "addr": {
+   "type": "address",
+   "sub": "yourband"
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "hold": 5.0,
+ "musicStart": 64.11,
+ "musicCredit": "Music: \"Jaunty Gumption\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}

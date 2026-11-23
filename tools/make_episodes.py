@@ -143,6 +143,58 @@ ep("dvs08", "5 Merch Setup Jobs The AI Does For You",
              "items": ["Real catalog products", "Real garment colors", "Brand details from chat", "Prices above a safe floor", "Draft store to review"]},
     "cta": CTA})
 
+# ---- reserve bank (dvs09+): rendered but NOT queued now; the cloud orchestrator posts them at 1 promo : 3 entertainment Shorts
+ep("dvs09", "How To Price Merch So You Never Sell At A Loss",
+   "The DIGITVL Stores AI suggests merch prices above a safe floor. You confirm every price before anything goes live.",
+   ["#merchtips", "#aitools"], "Newer_Wave",
+   [("Most artists guess their merch prices.", "hook"), ("Here's a better way.", "hook"),
+    ("DIGITVL Stores looks at what each product costs to make and ship.", "price"),
+    ("Then it suggests a price above a safe floor, so you don't sell at a loss.", "price"),
+    ("You can move the price up or down, and you confirm every one.", "price"),
+    ("Nothing goes live until you say yes.", "check"), ("Your brand, your prices, no surprises.", "check"),
+    ("Try it at stores.digitvl.com", "cta")],
+   {"hook": hook("STOP GUESSING", "YOUR MERCH", "PRICES"), "price": {"type": "price"},
+    "check": {"type": "checklist", "title": "YOU STAY IN CONTROL", "items": ["Suggested price above the floor", "You adjust it", "You confirm it", "Then it goes live"]}, "cta": CTA})
+
+ep("dvs10", "Pick Your Merch Colors From Real Garment Colors",
+   "The DIGITVL Stores setup matches your brand colors to real garment colors in the print-on-demand catalog.",
+   ["#artistmerch", "#branding"], "Adventure_Meme",
+   [("Your merch should match your brand.", "hook"), ("Dark and minimal? Bright and loud?", "hook"),
+    ("Tell the AI your vibe, and it matches it to colors that really exist in the catalog.", "chat"),
+    ("So the hoodie you preview is a hoodie you can actually sell.", "prod"),
+    ("Add your logo, and see it on tees, hoodies, mugs and more.", "prod"),
+    ("Then review the draft and publish when you're happy.", "prod"), ("Start your store at stores.digitvl.com", "cta")],
+   {"hook": hook("MERCH THAT", "MATCHES", "YOUR BRAND"),
+    "chat": {"type": "chat", "user": "Loud and bright. Streetwear. Tees and caps.", "ai": "Matching your vibe to real catalog colors.", "chips": ["T-shirt", "Hoodie", "Mug"]},
+    "prod": {"type": "products", "title": "REAL CATALOG COLORS", "items": ["tee", "hoodie", "cap", "mug"]}, "cta": CTA})
+
+ep("dvs11", "Why Your Link In Bio Should Be A Merch Store",
+   "Give fans a place to buy: a DIGITVL store with your own free address, ready for your bio.",
+   ["#linkinbio", "#artistmerch"], "Funk_Game_Loop",
+   [("Your link in bio is prime real estate.", "hook"), ("What's it sending fans to?", "hook"),
+    ("Point it at your own store, at artistname.digitvl.com", "addr"),
+    ("Fans see your logo on real products, not a list of links.", "prod"),
+    ("You pick the products, set the prices, and approve the store.", "prod"),
+    ("Printing and shipping happen only when someone orders.", "flow"),
+    ("Make your link do more at stores.digitvl.com", "cta")],
+   {"hook": hook("YOUR BIO LINK", "SHOULD SELL", "MERCH"), "addr": {"type": "address", "sub": "artistname", "big": True},
+    "prod": {"type": "products", "title": "YOUR LOGO, REAL PRODUCTS", "items": ["tee", "hoodie", "mug", "tote", "cap", "poster"]},
+    "flow": {"type": "flow", "title": "PRINTED WHEN ORDERED", "nodes": [{"i": "cart", "t": "A fan orders", "s": "on your store"}, {"i": "print", "t": "It gets printed", "s": "on demand"}, {"i": "box", "t": "It ships", "s": "you hold no stock"}]}, "cta": CTA})
+
+ep("dvs12", "Start A Merch Brand With Zero Stock And An AI Helper",
+   "Start an artist merch brand with no stock: guided setup or AI chat, real print-on-demand products, your own address.",
+   ["#merch", "#aitools"], "Jaunty_Gumption",
+   [("Starting a merch brand sounds expensive.", "hook"), ("It doesn't have to be.", "hook"),
+    ("With print on demand there's no stock to buy.", "cmp"), ("With an AI helper there's no developer to hire.", "chat"),
+    ("You choose products, add your logo, and set your prices.", "steps"),
+    ("Your store gets its own address, and you approve it before it goes live.", "addr"),
+    ("Begin at stores.digitvl.com", "cta")],
+   {"hook": hook("START A MERCH", "BRAND WITH", "ZERO STOCK"),
+    "cmp": {"type": "compare", "left": {"t": "THE OLD WAY", "l": ["Buy stock upfront", "Hire a developer", "Hope it sells"]}, "right": {"t": "DIGITVL STORES", "l": ["No stock to buy", "AI-guided setup", "You approve it"]}},
+    "chat": {"type": "chat", "user": "Merch brand for my band. Dark and minimal.", "ai": "Great. Drafting your store for review.", "chips": ["Tee", "Hoodie", "Mug"]},
+    "steps": {"type": "steps", "title": "THREE MOVES", "steps": [{"t": "Choose products", "s": "from the real catalog"}, {"t": "Add your logo", "s": "see it on the product"}, {"t": "Set your prices", "s": "you confirm each one"}]},
+    "addr": {"type": "address", "sub": "yourband"}, "cta": CTA})
+
 # (insert_before_index, text, scene): second pass to reach 30-45 s at the approved narrator pace (~3 words/s)
 EXTRA = {
     "dvs01": [(6, "That looks like yourname.digitvl.com, and the address is free.", "addr"), (7, "You bring the idea. The platform does the heavy lifting.", "chat")],
@@ -153,6 +205,10 @@ EXTRA = {
     "dvs06": [(2, "Websites used to take weeks and a lot of money.", "hook"), (6, "Your store, live at your own address, without writing a line of code.", "chat")],
     "dvs07": [(1, "No jargon. Just the five pieces that matter.", "hook"), (6, "Simple parts, working together, so you can focus on your art.", "stack")],
     "dvs08": [(1, "Here they are, one by one.", "hook"), (6, "Less setup. More time creating.", "list")],
+    "dvs09": [(3, "Printing and shipping costs are already counted in.", "price"), (7, "Fair prices for you, and for your fans.", "check")],
+    "dvs10": [(2, "Pick a color you love, then find the product doesn't come in it. Frustrating.", "hook"), (6, "No more mockups of things you can't actually sell.", "prod")],
+    "dvs11": [(3, "Every post, every video, every story can lead to one place.", "addr"), (7, "One link. Real products. A store that's yours.", "flow")],
+    "dvs12": [(2, "Here's the simple version.", "hook"), (6, "No big bill up front, and no boxes of stock at home.", "addr")],
 }
 for _id, ins in EXTRA.items():
     for idx, text, scene in sorted(ins, reverse=True):
@@ -161,6 +217,8 @@ for _id, ins in EXTRA.items():
 if __name__ == "__main__":
     (ROOT / "episodes").mkdir(exist_ok=True)
     for k, v in eps.items():
+        if k in ("dvs09", "dvs10", "dvs11", "dvs12"):
+            v["hold"] = 5.0
         if k == "dvs06":
             v["hold"] = 4.8  # shortest voice track: longer end card keeps it >= 30 s
         v["musicStart"] = MUSIC_START[v["music"]]

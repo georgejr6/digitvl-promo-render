@@ -1,0 +1,81 @@
+{
+ "id": "dvs09",
+ "title": "How To Price Merch So You Never Sell At A Loss",
+ "desc": "The DIGITVL Stores AI suggests merch prices above a safe floor. You confirm every price before anything goes live.",
+ "hashtags": [
+  "#merchtips",
+  "#aitools"
+ ],
+ "music": "Newer_Wave",
+ "sentences": [
+  {
+   "text": "Most artists guess their merch prices.",
+   "scene": "hook"
+  },
+  {
+   "text": "Here's a better way.",
+   "scene": "hook"
+  },
+  {
+   "text": "DIGITVL Stores looks at what each product costs to make and ship.",
+   "scene": "price"
+  },
+  {
+   "text": "Printing and shipping costs are already counted in.",
+   "scene": "price"
+  },
+  {
+   "text": "Then it suggests a price above a safe floor, so you don't sell at a loss.",
+   "scene": "price"
+  },
+  {
+   "text": "You can move the price up or down, and you confirm every one.",
+   "scene": "price"
+  },
+  {
+   "text": "Nothing goes live until you say yes.",
+   "scene": "check"
+  },
+  {
+   "text": "Your brand, your prices, no surprises.",
+   "scene": "check"
+  },
+  {
+   "text": "Fair prices for you, and for your fans.",
+   "scene": "check"
+  },
+  {
+   "text": "Try it at stores.digitvl.com",
+   "scene": "cta"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "STOP GUESSING",
+    "YOUR MERCH",
+    "PRICES"
+   ]
+  },
+  "price": {
+   "type": "price"
+  },
+  "check": {
+   "type": "checklist",
+   "title": "YOU STAY IN CONTROL",
+   "items": [
+    "Suggested price above the floor",
+    "You adjust it",
+    "You confirm it",
+    "Then it goes live"
+   ]
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "hold": 5.0,
+ "musicStart": 89.45,
+ "musicCredit": "Music: \"Newer Wave\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}

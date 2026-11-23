@@ -1,0 +1,102 @@
+{
+ "id": "dvs11",
+ "title": "Why Your Link In Bio Should Be A Merch Store",
+ "desc": "Give fans a place to buy: a DIGITVL store with your own free address, ready for your bio.",
+ "hashtags": [
+  "#linkinbio",
+  "#artistmerch"
+ ],
+ "music": "Funk_Game_Loop",
+ "sentences": [
+  {
+   "text": "Your link in bio is prime real estate.",
+   "scene": "hook"
+  },
+  {
+   "text": "What's it sending fans to?",
+   "scene": "hook"
+  },
+  {
+   "text": "Point it at your own store, at artistname.digitvl.com",
+   "scene": "addr"
+  },
+  {
+   "text": "Every post, every video, every story can lead to one place.",
+   "scene": "addr"
+  },
+  {
+   "text": "Fans see your logo on real products, not a list of links.",
+   "scene": "prod"
+  },
+  {
+   "text": "You pick the products, set the prices, and approve the store.",
+   "scene": "prod"
+  },
+  {
+   "text": "Printing and shipping happen only when someone orders.",
+   "scene": "flow"
+  },
+  {
+   "text": "Make your link do more at stores.digitvl.com",
+   "scene": "cta"
+  },
+  {
+   "text": "One link. Real products. A store that's yours.",
+   "scene": "flow"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "YOUR BIO LINK",
+    "SHOULD SELL",
+    "MERCH"
+   ]
+  },
+  "addr": {
+   "type": "address",
+   "sub": "artistname",
+   "big": true
+  },
+  "prod": {
+   "type": "products",
+   "title": "YOUR LOGO, REAL PRODUCTS",
+   "items": [
+    "tee",
+    "hoodie",
+    "mug",
+    "tote",
+    "cap",
+    "poster"
+   ]
+  },
+  "flow": {
+   "type": "flow",
+   "title": "PRINTED WHEN ORDERED",
+   "nodes": [
+    {
+     "i": "cart",
+     "t": "A fan orders",
+     "s": "on your store"
+    },
+    {
+     "i": "print",
+     "t": "It gets printed",
+     "s": "on demand"
+    },
+    {
+     "i": "box",
+     "t": "It ships",
+     "s": "you hold no stock"
+    }
+   ]
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "hold": 5.0,
+ "musicStart": 0,
+ "musicCredit": "Music: \"Funk Game Loop\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}

@@ -1,0 +1,84 @@
+{
+ "id": "dvs10",
+ "title": "Pick Your Merch Colors From Real Garment Colors",
+ "desc": "The DIGITVL Stores setup matches your brand colors to real garment colors in the print-on-demand catalog.",
+ "hashtags": [
+  "#artistmerch",
+  "#branding"
+ ],
+ "music": "Adventure_Meme",
+ "sentences": [
+  {
+   "text": "Your merch should match your brand.",
+   "scene": "hook"
+  },
+  {
+   "text": "Dark and minimal? Bright and loud?",
+   "scene": "hook"
+  },
+  {
+   "text": "Pick a color you love, then find the product doesn't come in it. Frustrating.",
+   "scene": "hook"
+  },
+  {
+   "text": "Tell the AI your vibe, and it matches it to colors that really exist in the catalog.",
+   "scene": "chat"
+  },
+  {
+   "text": "So the hoodie you preview is a hoodie you can actually sell.",
+   "scene": "prod"
+  },
+  {
+   "text": "Add your logo, and see it on tees, hoodies, mugs and more.",
+   "scene": "prod"
+  },
+  {
+   "text": "Then review the draft and publish when you're happy.",
+   "scene": "prod"
+  },
+  {
+   "text": "No more mockups of things you can't actually sell.",
+   "scene": "prod"
+  },
+  {
+   "text": "Start your store at stores.digitvl.com",
+   "scene": "cta"
+  }
+ ],
+ "scenes": {
+  "hook": {
+   "type": "hook",
+   "lines": [
+    "MERCH THAT",
+    "MATCHES",
+    "YOUR BRAND"
+   ]
+  },
+  "chat": {
+   "type": "chat",
+   "user": "Loud and bright. Streetwear. Tees and caps.",
+   "ai": "Matching your vibe to real catalog colors.",
+   "chips": [
+    "T-shirt",
+    "Hoodie",
+    "Mug"
+   ]
+  },
+  "prod": {
+   "type": "products",
+   "title": "REAL CATALOG COLORS",
+   "items": [
+    "tee",
+    "hoodie",
+    "cap",
+    "mug"
+   ]
+  },
+  "cta": {
+   "type": "cta"
+  }
+ },
+ "hold": 5.0,
+ "musicStart": 0,
+ "musicCredit": "Music: \"Adventure Meme\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/"
+}
